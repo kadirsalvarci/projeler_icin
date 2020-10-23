@@ -42,7 +42,7 @@ Resources:
       LaunchTemplateData: 
         ImageId: ami-0947d2ba12ee1ff75
         InstanceType: t2.micro
-        KeyName: serdar
+        KeyName: KEY
         SecurityGroupIds: 
           - !GetAtt WebServerSecurityGroup.GroupId
         TagSpecifications: 
@@ -87,12 +87,12 @@ Resources:
       SecurityGroups:
         - !GetAtt ALBSecurityGroup.GroupId
       Subnets:
-        - subnet-077c9758
-        - subnet-3246e63c
-        - subnet-3ccd235a
-        - subnet-8d8dbfb3
-        - subnet-c41ba589
-        - subnet-ed49bccc
+        - subnet-0aa18bc580c5a614c
+        - subnet-06ffb79bde7d657b4
+        - subnet-0dd0127d7100514f3
+        - subnet-0c92f2b6efa2c96d7
+        - subnet-0f3218606e2a76c09
+        - subnet-09d11f77d1be8e441
       Type: application
 
   ALBListener:
@@ -145,7 +145,7 @@ Resources:
       DBInstanceClass: db.t2.micro #Required
       EngineVersion: 8.0.19
       MasterUsername: admin
-      MasterUserPassword: Serdar_1
+      MasterUserPassword: clarusway-1
       MultiAZ: false
       Port: 3306
       PubliclyAccessible: true
